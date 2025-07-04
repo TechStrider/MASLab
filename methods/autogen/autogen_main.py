@@ -37,7 +37,7 @@ class AutoGen_Main(MAS):
         self.history.append({"content": query, "role": "user_proxy"})
         
         if self.is_termination_msg in assistant_agent_response:
-            return assistant_agent_response
+            return {"response": assistant_agent_response}
         
         for i in range(self.max_turn - 1):
             
